@@ -2,39 +2,26 @@
 <html lang="en">
   <head>
     <title>The Roaming Review</title>
-    <!-- #0A703C is the favicon background colour code. -->
-    <!-- Playfair Display is the font. -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
   </head>
   <body>
-    <nav>
-      <a href="/about">About Me</a>
-      <a href="/posts">Posts</a>
-      <a href="/reviews">Reviews</a>
-    </nav>
-    <h1 class="left">The Roaming Review</h1>
-    <h4 class="right">The anti travel blog.</h4>
-    <br />
-    <article class="new-article left">
-      <img src="/assets/images/petra.jpg" alt="The Treasury, Petra" width="600" height="500" />
-      <h2>A Guide to Petra in Jordan</h2>
-      <p>To get the most of your visit to Petra, in Jordan, follow this in depth guide...</p>
-    </article>
-    <article>
-      <img src="/assets/images/lake_bled.jpg" alt="Lake Bled, Slovenia" width="300" height="250" />
-      <h3>Visiting Lake Bled in Slovenia</h3>
-      <p>For the most tranquil place in the entire Balkland region, go here...</p>
-    </article>
-    <article>
-      <img src="/assets/images/berlin.jpg" alt="Lake Bled, Slovenia" width="300" height="250" />
-      <h3>Make the Most of Your Trip to Berlin</h3>
-      <p>Tip number one; don't turn up hungry and hungover with only 2 days in your itinerary...</p>
-    </article>
-    <article>
-      <img src="/assets/images/zagreb.jpg" alt="Lake Bled, Slovenia" width="300" height="250" />
-      <h3>Top 10 Places to Eat in Zagreb</h3>
-      <p>Zagreb is home to at least 4 McDonald's Restaurants. That's almost half the list complete...</p>
-    </article>
+    <div class="container">
+      <nav class="navbar">
+        <a href="/index.html" class="logo"><h1>The Roaming Review</h1></a>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav">
+          <li class="nav-item"><a href="/about.html">About Me</a></li>
+          <li class="nav-item"><a href="/posts.html">Posts</a></li>
+          <li class="nav-item"><a href="/reviews.html">Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="/assets/main.js"></script>
   </body>
 </html>
