@@ -1,0 +1,30 @@
+{
+  "name": "roamingreview",
+  "version": "0.0.1",
+  "description": "A personal travel blog. The anti-travel-blog travel blog.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/top-lingonberry/roamingreview.git"
+  },
+  "author": "top-lingonberry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/top-lingonberry/roamingreview/issues"
+  },
+  "homepage": "https://github.com/top-lingonberry/roamingreview#readme",
+  "dependencies": {
+    "@types/node": "^17.0.36",
+    "@types/react": "^18.0.9",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "typescript": "^4.7.2"
+  }
+}
