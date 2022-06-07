@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>The Roaming Review</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <link rel="stylesheet" href="/styles/index.css" />
+    <meta charset="utf-8" />
+    <title>CSS Playground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/styles/index.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
-      <nav class="navbar">
-        <a href="/index.html" class="logo"><h1>The Roaming Review</h1></a>
-        <div class="menu-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <div class="primary-container">
+      <section class="top">
+        <div class="top-content">
+          <p>TOP POST</p>
+          <h2>This is the Top Post</h2>
         </div>
-        <ul class="nav">
-          <li class="nav-item"><a href="/about.html">About Me</a></li>
-          <li class="nav-item"><a href="/posts.html">Posts</a></li>
-          <li class="nav-item"><a href="/reviews.html">Reviews</a></li>
-        </ul>
-      </nav>
+      </section>
+      <section class="past">
+        <div class="article">
+          <h5>Previous Article 1</h5>
+          <p>Lorum ipsum yadda, yadda, yadda...</p>
+        </div>
+        <div class="article">
+          <h5>Previous Article 2</h5>
+          <p>Lorum ipsum yadda, yadda, yadda...</p>
+        </div>
+      </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-    <script src="/assets/main.js"></script>
   </body>
 </html>
