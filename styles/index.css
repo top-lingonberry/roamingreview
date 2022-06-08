@@ -1,9 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&display=swap');
+
+/* Theme colour: #363457, Space Cadet */
+
+/* BASIC SETUP */
 * {
   width: 100%;
   height: auto;
   margin: 0%;
   padding: 0%;
   border: 0%;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3, p {
+  font-family: 'Oswald', sans-serif;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
 }
 
 .primary-container {
@@ -20,6 +49,19 @@
   align-items: center;
 }
 
+.top > .logo {
+  position: absolute;
+  top: 5vh;
+  left: 5vh;
+  height: 7vh;
+  width: 7vh;
+}
+
 .top > .top-content {
   text-align: center;
+  min-width: 100vw;
+}
+
+.past {
+  min-height: 100vh;
 }
