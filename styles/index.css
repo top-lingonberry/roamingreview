@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&display=swap');
 
-/* Theme colour: #363457, Space Cadet */
-
 * {
-  width: 100%;
   height: auto;
   margin: 0px;
   padding: 0px;
@@ -39,48 +36,54 @@ p {
   grid-template-rows: 100vh auto;
 }
 
-.top {
-  background: url(/public/images/monastery.jpg) no-repeat 50%;
-  min-height: 100vh;
-  background-size: cover;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-}
-
-.nav {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background-color: transparent;
-  max-height: 100vh;
-  width: 100vw;
-  padding: 5vh 5vw 0px 5vw;
-  pointer-events: none;
-}
-
-.nav > .logo {
+/*
+This needs fixing so that the height (of this element and the nav-toggle 
+container) is calculated based on (rem * line height). Likely to cause issues 
+in the future in its current form. To be addressed when adding SCSS.
+*/
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
   font-size: 3rem;
-  color: #363457;
-  pointer-events: auto;
+  color: #ffffff;
   text-decoration: none;
+  height: 60px;
 }
 
-.nav > .logo:hover, .logo:active {
-  color: #4a4867;
-}
-
-.nav-toggle {
-  align-self: flex-end;
+.nav-toggle-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 30px;
+  right: 30px;
   cursor: pointer;
+  background-color: transparent;
+  height: 60px;
+}
+
+.nav-toggle-menu {
+  padding: 10px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.nav-toggle-bars {
+  background-color: transparent;
 }
 
 .nav-bar-top, .nav-bar-middle, .nav-bar-bottom {
   width: 35px;
-  height: 5px;
-  background-color: #363457; 
+  height: 2px;
+  background-color: #ffffff; 
   margin: 6px 0;
   transition: 0.4s;
+}
+
+.nav-toggle-menu:hover, .nav-toggle-bars:hover {
+  cursor: pointer;
 }
 
 .active .nav-bar-top {
@@ -93,6 +96,15 @@ p {
 .active .nav-bar-bottom {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.top {
+  background: url(/public/images/monastery.jpg) no-repeat 50%;
+  min-height: 100vh;
+  background-size: cover;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
 }
 
 .top > .top-content {
