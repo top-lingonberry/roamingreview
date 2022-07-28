@@ -1,8 +1,3 @@
-.container {
-  display: grid;
-  grid-template-rows: 100vh auto;
-}
-
 /*
 This needs fixing so that the height (of this element and the nav-toggle 
 container) is calculated based on (rem * line height). Likely to cause issues 

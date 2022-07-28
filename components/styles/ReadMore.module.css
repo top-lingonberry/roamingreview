@@ -1,0 +1,16 @@
+.readMore:link, .readMore:visited {
+  font-family: 'Oswald', sans-serif;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #ffffff;
+  margin: 14px;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.readMore:hover, .readMore:active {
+  background-color: #ffffff;
+  color: #000000;
+}

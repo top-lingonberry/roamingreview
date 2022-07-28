@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
+import ReadMore from './read-more'
 import styles from './styles/HeroPost.module.css'
 
 type Props = {
@@ -19,7 +20,11 @@ const HeroPost = ({
           objectFit='cover'
           alt='Petra, Jordan'
         />
-        <h1 className={styles.heroTitle}>{title}</h1>
+        <div className={styles.heroTitle}>
+          <h3>Latest Post</h3>
+          <h1>{title}</h1>
+          <ReadMore target={title} />
+        </div>
     </section>
   )
 }
