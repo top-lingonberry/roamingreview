@@ -4,12 +4,14 @@ import styles from './styles/HeroPost.module.css'
 
 type Props = {
   title: string,
-  coverImage: StaticImageData
+  coverImage: StaticImageData,
+  link: string
 }
 
 const HeroPost = ({
   title,
-  coverImage
+  coverImage,
+  link
 }: Props) => {
   return (
     <section className={styles.container}>
@@ -23,7 +25,7 @@ const HeroPost = ({
         <div className={styles.heroTitle}>
           <h3>Latest Post</h3>
           <h1>{title}</h1>
-          <ReadMore target={title} />
+          <ReadMore target={link} />
         </div>
     </section>
   )
