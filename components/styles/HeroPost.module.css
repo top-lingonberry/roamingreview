@@ -1,0 +1,17 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.heroImage {
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.heroTitle {
+  text-align: center;
+  min-width: 100vw;
+  z-index: 1;
+}

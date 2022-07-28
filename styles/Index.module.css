@@ -65,20 +65,6 @@ in the future in its current form. To be addressed when adding SCSS.
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-.top {
-  background: url(/public/images/monastery.jpg) no-repeat 50%;
-  min-height: 100vh;
-  background-size: cover;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-}
-
-.top > .top-content {
-  text-align: center;
-  min-width: 100vw;
-}
-
 .past {
   min-height: 100vh;
 }

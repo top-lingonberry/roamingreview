@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import TopPost from '../components/top-post'
+import HeroPost from '../components/hero-post'
 import styles from '../styles/Home.module.css'
 import petraPhoto from '../public/images/monastery.jpg'
 
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
 
-      <a href="/index.html" className="logo">RR</a>
+      {/* <a href="/index.html" className="logo">RR</a>
       <div className="nav-toggle-container">
         <div className="nav-toggle-menu">Menu</div>
         <button className="nav-toggle-bars">
@@ -23,11 +23,11 @@ const Home: NextPage = () => {
           <div className="nav-bar-middle"></div>
           <div className="nav-bar-bottom"></div>
         </button>
-      </div>
+      </div> */}
 
-      <TopPost title= {"Ukraine in the War"} coverImage={petraPhoto} />
+      <HeroPost title= {"Exploring Petra"} coverImage={petraPhoto} />
 
-      <section className="past">
+      {/* <section className="past">
         <div className="article">
           <h2>Previous Article 1</h2>
           <p>Lorum ipsum yadda, yadda, yadda...</p>
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           <h2>Previous Article 2</h2>
           <p>Lorum ipsum yadda, yadda, yadda...</p>
         </div>
-      </section>
+      </section> */}
 
     </div>
   )
