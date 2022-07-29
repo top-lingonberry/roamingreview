@@ -2,15 +2,14 @@ import Image from 'next/image'
 import styles from './styles/Navbar.module.css'
 import logoImage from '../public/android-chrome-192x192.png'
 
-
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <a className={styles.logo} href="index.html">
+      <a className={styles.logo} href="/">
         <Image
           src={logoImage}
-          width={50}
-          height={50}
+          width={60}
+          height={60}
           alt='Trajet Logo'
         />
       </a>

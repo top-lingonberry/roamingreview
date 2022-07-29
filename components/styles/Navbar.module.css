@@ -14,7 +14,6 @@
 
 .logo {
   pointer-events: all;
-  z-index: 20;
 }
 
 .navToggleContainer {
@@ -33,7 +32,7 @@
 
 .navBarTop, .navBarMiddle, .navBarBottom {
   width: 35px;
-  height: 5px;
+  height: 4px;
   background-color: #ffffff;
   margin: 6px 0;
   transition: 0.4s;
@@ -41,4 +40,16 @@
 
 .navToggleMenu:hover, .navToggleBars:hover {
   cursor: pointer;
+}
+
+.active .navBarTop {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.active .navBarMiddle {opacity: 0;}
+
+.active .navBarBottom {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }

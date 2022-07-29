@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import HeroPost from '../components/hero-post'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/navbar'
 import styles from '../styles/Home.module.css'
 import petraPhoto from '../public/images/monastery.jpg'
 
