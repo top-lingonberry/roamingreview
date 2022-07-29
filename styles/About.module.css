@@ -1,0 +1,69 @@
+.navContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #123456;
+  top: 0%;
+  left:0%;
+  transition: 0.4s;
+  transform: translateY(calc(-100vh + 80px));
+  pointer-events: none;
+}
+
+.menuBar {
+  align-self: flex-end;
+
+  display: flex;
+  align-content: space-between;
+
+  width: calc(100% - 60px);
+  height: 80px;
+  margin: 0px 30px;
+}
+
+.logo {
+  pointer-events: all;
+  align-self: center;
+}
+
+.burgerContainer {
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  height: 80px;
+  pointer-events: all;
+}
+
+.burgerBars {
+  background-color: transparent;
+}
+
+.burgerBars:hover {
+  cursor: pointer;
+}
+
+.burgerBar1, .burgerBar2, .burgerBar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.navContainer.active {
+  background-color:rgba(0,0,0,0.95);
+  transform: translateY(0);
+}
+
+.active .burgerBar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.navActive .burgerBar2 {opacity: 0;}
+
+.navActive .burgerBar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
