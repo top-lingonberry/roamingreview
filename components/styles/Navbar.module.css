@@ -42,14 +42,14 @@
   cursor: pointer;
 }
 
-.active .navBarTop {
+.navActive .navBarTop {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.active .navBarMiddle {opacity: 0;}
+.navActive .navBarMiddle {opacity: 0;}
 
-.active .navBarBottom {
+.navActive .navBarBottom {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }

@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
         <HeroPost title={"Exploring Petra"} coverImage={petraPhoto} link={"petra"} />
 
-        {/* <section className="past">
+        <section className="past">
           <div className="article">
             <h2>Previous Article 1</h2>
             <p>Lorum ipsum yadda, yadda, yadda...</p>
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
             <h2>Previous Article 2</h2>
             <p>Lorum ipsum yadda, yadda, yadda...</p>
           </div>
-        </section> */}
+        </section>
 
       </div>
     </>
