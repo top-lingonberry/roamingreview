@@ -4,10 +4,29 @@ import logoImage from '../public/android-chrome-192x192.png'
 import styles from '../styles/About.module.css'
 
 const About = () => {
+  const [isNavActive, setNavActive] = useState(false);
 
+  const toggleNav = () => {
+    setNavActive(!isNavActive);
+  };
+
+  const classNames = isNavActive
+    ? `${styles.navToggleBars} ${styles.navActive}`
+    : styles.navToggleBars;
 
   return (
-    <nav className={styles.navContainer}>
+    <body className={styles.boddy}>
+    <nav className={isNavActive
+                      ? `${styles.navContainer} ${styles.navActive}`
+                      : styles.navContainer}>
+      <div className={styles.navSpacer}>
+        {/* Spacer for Centering Navigation */}
+      </div>
+      <ul className={styles.navLinksContainer}>
+        <li><a href="/about" className={styles.navLink}>About</a></li>
+        <li><a href="/posts" className={styles.navLink}>Posts</a></li>
+        <li><a href="/contact" className={styles.navLink}>Contact</a></li>
+      </ul>
       <div className={styles.menuBar}>
         <a className={styles.logo} href="/">
           <Image
@@ -18,7 +37,10 @@ const About = () => {
           />
         </a>
         <div className={styles.burgerContainer}>
-          <button className={styles.burgerBars}>
+          <button className={isNavActive
+                              ? `${styles.burgerBars} ${styles.navActive}`
+                              : styles.burgerBars}
+          onClick={toggleNav}>
             <div className={styles.burgerBar1}></div>
             <div className={styles.burgerBar2}></div>
             <div className={styles.burgerBar3}></div>
@@ -26,6 +48,7 @@ const About = () => {
         </div>
       </div>
     </nav>
+    </body>
   )
 }
 

@@ -1,50 +1,39 @@
-.navbar {
-  display: flex;
-  z-index: 20;
-  background-color: transparent;
-  pointer-events: none;
-  width: calc(100vw - 60px);
-  height: 60px;
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  justify-content: space-between;
-  padding: 20px 30px 20px 30px;
-}
-
 .navContainer {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  top: 0%;
+  left:0%;
   transition: 0.4s;
-  transform: translateY(-100vh);
-  align-content: center;
-  justify-content: center;
-  z-index: 10;
-  background-color:rgba(0,0,0,0.95);
-  pointer-events: all;
+  transform: translateY(calc(-100vh + 80px));
+  pointer-events: none;
+  align-content: space-between;
 }
 
-.navContainer.navActive {
-  transform: translateY(0);
+.navSpacer {
+  align-self: flex-start;
+
+  width: calc(100% - 60px);
+  height: 80px;
+  margin: 0px 30px;
 }
 
-.navList {
-  z-index: 11;
-  pointer-events: all;
-  align-content: center;
+.navLinksContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+
+  width: calc(100% - 60px);
+  margin: 0px 30px;
+  height: calc(100vh - 160px);
 }
 
-.navItem {
-  text-align: center;
-  padding: 2rem;
+.navLinksContainer > li {
+  list-style: none;
+  padding: 20px;
 }
 
 .navLink:link, .navLink:visited {
@@ -62,22 +51,41 @@
   text-decoration: none;
 }
 
-.navToggleContainer {
+.menuBar {
+  align-self: flex-end;
+  width: calc(100% - 60px);
+  height: 80px;
+  margin: 0px 30px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  pointer-events: all;
+  align-self: center;
+}
+
+.burgerContainer {
+  right: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
   background-color: transparent;
-  height: 60px;
+  height: 80px;
   pointer-events: all;
-  z-index: 21;
 }
 
-.navToggleBars {
+.burgerBars {
   background-color: transparent;
 }
 
-.navBarTop, .navBarMiddle, .navBarBottom {
+.burgerBars:hover {
+  cursor: pointer;
+}
+
+.burgerBar1, .burgerBar2, .burgerBar3 {
   width: 35px;
   height: 5px;
   background-color: #ffffff;
@@ -85,23 +93,17 @@
   transition: 0.4s;
 }
 
-.navToggleMenu:hover, .navToggleBars:hover {
-  cursor: pointer;
+.navContainer.navActive {
+  background-color:rgba(0,0,0,0.95);
+  transform: translateY(0);
 }
 
-.navActive .navBarTop {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+.active .burgerBar1 {
   transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.navActive .navBarMiddle {opacity: 0;}
+.navActive .burgerBar2 {opacity: 0;}
 
-.navActive .navBarBottom {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+.navActive .burgerBar3 {
   transform: rotate(45deg) translate(-8px, -8px);
-}
-
-.logo {
-  pointer-events: all;
-  z-index: 21;
 }
