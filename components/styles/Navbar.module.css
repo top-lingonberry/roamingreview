@@ -1,67 +1,33 @@
 .navContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+
   height: 100vh;
+  width: 100vw;
+
   background-color: transparent;
-  top: 0%;
-  left:0%;
-  transition: 0.4s;
-  transform: translateY(calc(-100vh + 80px));
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: calc(60px + 4rem) 1fr;
+
   pointer-events: none;
-  align-content: space-between;
+
+  z-index: 99;
 }
 
-.navSpacer {
-  align-self: flex-start;
-
-  width: calc(100% - 60px);
-  height: 80px;
-  margin: 0px 30px;
-}
-
-.navLinksContainer {
+.navBar {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-
-  width: calc(100% - 60px);
-  margin: 0px 30px;
-  height: calc(100vh - 160px);
-}
-
-.navLinksContainer > li {
-  list-style: none;
-  padding: 20px;
-}
-
-.navLink:link, .navLink:visited {
-  z-index: 12;
-  align-content: center;
-  pointer-events: all;
-  text-decoration: none;
-  color: #ffffff;
-  font-family: 'Oswald', sans-serif;
-  font-size: 3.5rem;
-  text-align: center;
-}
-
-.navLink:hover, .navLink:active {
-  text-decoration: none;
-}
-
-.menuBar {
-  align-self: flex-end;
-  width: calc(100% - 60px);
-  height: 80px;
-  margin: 0px 30px;
-
-  display: flex;
   justify-content: space-between;
+
+  padding: 2rem 2rem;
+
+  transition: 0.4s;
 }
 
-.logo {
+.navLogo {
   pointer-events: all;
   align-self: center;
 }
@@ -93,17 +59,47 @@
   transition: 0.4s;
 }
 
-.navContainer.navActive {
-  background-color:rgba(0,0,0,0.95);
-  transform: translateY(0);
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.4s;
+  transform: translateX(-100vw);
 }
 
-.active .burgerBar1 {
+.navMenu :is(ul) {
+  list-style: none;
+}
+
+.navMenu :is(li, a:link, a:visited, a:hover, a:active) {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  padding: 2rem;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  pointer-events: all;
+}
+
+.navActive :is(.navMenu) {
+  background-color:rgba(0,0,0,0.8);
+  transform: translateX(0);
+}
+
+.navActive :is(.navBar) {
+  background-color:rgba(0,0,0,1);
+}
+
+.navActive :is(.burgerBar1) {
   transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.navActive .burgerBar2 {opacity: 0;}
+.navActive :is(.burgerBar2) {
+  opacity: 0;
+}
 
-.navActive .burgerBar3 {
+.navActive :is(.burgerBar3) {
   transform: rotate(45deg) translate(-8px, -8px);
 }
