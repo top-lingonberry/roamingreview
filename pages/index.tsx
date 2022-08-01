@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import HeroPost from '../components/hero-post'
+import CustomHead from '../components/head'
 import Navbar from '../components/navbar'
+import HeroPost from '../components/hero-post'
 import styles from '../styles/Home.module.css'
 import petraPhoto from '../public/images/monastery.jpg'
 
@@ -11,11 +12,10 @@ const Home: NextPage = () => {
       <Navbar />
 
       <Head>
-        <meta charSet="utf-8" />
         <title>Home | Trajet</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
+
+      <CustomHead />
 
       <div className={styles.container}>
 

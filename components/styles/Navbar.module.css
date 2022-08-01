@@ -84,7 +84,7 @@
 }
 
 .navActive :is(.navMenu) {
-  background-color:rgba(0,0,0,0.8);
+  background-color:rgba(0,0,0,0.85);
   transform: translateX(0);
 }
 
