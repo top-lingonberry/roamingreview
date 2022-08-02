@@ -9,15 +9,15 @@ import petraPhoto from '../public/images/monastery.jpg'
 const Home: NextPage = () => {
   return (
     <>
-      <Navbar />
+      <CustomHead />
 
       <Head>
         <title>Home | Trajet</title>
+        <meta name="description" content="This is meta description Sample. We can add up to 158."></meta>
       </Head>
 
-      <CustomHead />
-
       <div className={styles.container}>
+        <Navbar />
 
         <HeroPost title={"Exploring Petra"} coverImage={petraPhoto} link={"petra"} />
 
