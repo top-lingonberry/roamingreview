@@ -1,0 +1,17 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #ffffff;
+}
+
+.errorContainer :is(h1, h3) {
+  color: #000000;
+  text-align: center;
+}
